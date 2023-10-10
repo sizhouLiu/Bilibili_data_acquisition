@@ -7,7 +7,6 @@ import numpy as np # 安装词云的时候一起装上的
 import os
 
 
-
 def concat(path1,path2):
 
     df1 = pd.read_csv("sizhouliu的收藏夹.csv")
@@ -15,11 +14,6 @@ def concat(path1,path2):
     df3 = pd.concat([df1,df2])
     print(df3)
     df3.to_csv("合并数据.csv")
-
-
-stopwords = set()
-content = [line.strip() for line in open('../cn_stopwords.txt', 'r', encoding="utf-8").readlines()]
-stopwords.update(content)
 
 def readComment():
     with open("刘思洲的历史记录.csv", 'r', encoding="utf-8") as file:
